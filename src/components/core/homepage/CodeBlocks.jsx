@@ -41,7 +41,7 @@ const CodeBlocks = ({position, heading, subheading, ctabtn1, ctabtn2, codeblock,
           <p>10</p>
           <p>11</p>
         </div>
-        <div className={`w-[90%] flex flex-row gap-2 font-bold font-mono pr-2`}>
+        <div className={`w-[90%] flex flex-col gap-2 font-bold font-mono pr-2`}>
           <TypeAnimation
             sequence={[codeblock, 2000, ""]}
             repeat={Infinity}

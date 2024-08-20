@@ -20,7 +20,7 @@ const Home = () => {
         <Link to="/signup">
           <div className='group mt-16 p-1 mx-auto rounded-full text-richblack-200 bg-richblack-800 font-bold transition-all duration-200 hover:scale-95 w-fit'>
             <div className='flex items-center gap-2 rounded-full px-10 py-[5px] transition-all duration-200 group-hover:bg-richblack-900'>
-              <p>Become and Instructor</p>
+              <p>Become an Instructor</p>
               <FaArrowRight/>
             </div>
           </div>
@@ -35,10 +35,10 @@ const Home = () => {
           from instructors.
         </div>
         <div className='flex gap-7 mt-8'>
-          <CTAbutton active={true} linkto={"/signup"}>Learn More</CTAbutton>
-          <CTAbutton active={false} linkto={"login"}>Book a Demo</CTAbutton>
+          <CTAbutton active={true} linkto={"/signup"}>New to StudyNotion?</CTAbutton>
+          <CTAbutton active={false} linkto={"login"}>Welcome Back</CTAbutton>
         </div>
-        <div className='mx-3 my-12 shadow-blue-200 w-[80%] drop-shadow-lg'>
+        <div className='mx-3 my-12 w-[80%]'>
           <video muted loop autoPlay className='grad'> <source src={Banner} type='video/mp4'/> </video>
         </div>
 
@@ -50,14 +50,14 @@ const Home = () => {
             subheading={<div>Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you.</div>}
             ctabtn1={
               {
-                btnText: "try it yourself",
+                btnText: "Try it yourself!",
                 linkto: '/signup',
                 active: true
               }
             }
             ctabtn2={
               {
-                btnText: "Learn More",
+                btnText: "Here you go!",
                 linkto: '/login',
                 active: false
               }
@@ -127,15 +127,6 @@ const Home = () => {
           <TimelineSection/>
           <LearningLanguageSection/>
         </div>
-      </div>
-
-      {/* Section 3 */}
-      <div className="w-11/12 mx-auto max-w-maxContent flex-col items-center justify-between gap-8 first-letter bg-richblack-900 text-white">
-        <InstructorSection/>
-        <h2 className="text-center text-4xl font-semobold mt-10">
-					Reviews from Other Learners
-				</h2>
-        <ReviewSlider />
       </div>
     </div>
   )

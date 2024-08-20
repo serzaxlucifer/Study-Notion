@@ -40,7 +40,10 @@ exports.signUp = async (req, res) => {
     }
 
     //Find most recent OTP
-    const recentOtp=await OTP.find({email}).sort({createdAt:-1}).limit(1);
+    const recentOtp = await OTP.find({email}).sort({createdAt:-1}).limit(1);
+    console.log("Backend Matching");
+    console.log(email);
+    console.log(recentOtp);
     
     //Validate OTP
     if(recentOtp.length === 0){

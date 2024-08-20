@@ -83,12 +83,12 @@ export function login(email, password, navigate) {
         ? response.data.user.image
         : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.firstName} ${response.data.user.lastName}`
       dispatch(setUser({...response.data.user, image:userImage}));
+      localStorage.setItem("token", JSON.stringify(response.data.token))
+      localStorage.setItem("user", JSON.stringify(response.data.user))
       delete response.data.user.token;
       delete response.data.user.accountType;
       delete response.data.user.active;
       delete response.data.user.approved;
-      localStorage.setItem("token", JSON.stringify(response.data.token))
-      localStorage.setItem("user", JSON.stringify(response.data.user))
       navigate("/dashboard/my-profile")
     } catch(err){
       toast.error(err.response.data.message)
