@@ -6,10 +6,10 @@ import frameImg from '../../../assets/Images/frame.png'
 const Template = ({title, description1, description2, formType, image}) => {
   const [formData, setFormData] = useState({email:"", password:""})
   const userG = () => {
-    setFormData({email: "programmingid1306@gmail.com", password: "1234"})
+    setFormData({email: "mukulsinghmalik@gmail.com", password: "12345678"})
   }
   const instG = () => {
-    setFormData({email: "girishkumari1985@gmail.com", password: "1234"})
+    setFormData({email: "hello.studynotion@gmail.com", password: "12345678"})
   }
   return (
     <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
